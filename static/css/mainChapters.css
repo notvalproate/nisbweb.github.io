@@ -65,10 +65,11 @@
     font-family: "Fira Sans", sans-serif;
 }
 #CSBenefits {
+    width: 50%;
     margin-top: 1.25rem;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 #CSBenefits p {
@@ -80,6 +81,29 @@
     font-family: "Fira Sans", sans-serif;
     font-size: 1rem;
 }
+#CSAim p {
+    font-size: 1.25rem;
+    font-family: "Hind Siliguri",sans-serif;
+    font-weight: 700;
+
+}
+#CSAim ul li {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    text-align: justify
+}
+
+#csGroupImg {
+    margin-top: 1rem;
+    width: 50vw;
+}
+
+#csCrowdImg {
+    margin-top: 1rem;
+    width: 30vw;
+    height: 18vw;
+}
+
 #wie {
     display: flex;
     flex-flow: column wrap;
