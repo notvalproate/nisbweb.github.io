@@ -49,10 +49,11 @@
     width: 4rem;
 }
 #introCSHead p {
-    font-family: "Hind Siliguri", sans-serif;
-    font-size: 1.25rem;
-    color: #404040;
-    font-weight: 700;
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 #introCSCont {
     display: flex;
