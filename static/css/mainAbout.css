@@ -72,6 +72,7 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 0.5rem;
+    text-align: center;
 }
 .teamPic {
     margin-top:-0.2rem;
