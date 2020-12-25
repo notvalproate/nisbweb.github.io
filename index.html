@@ -1,202 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111602779-2"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NISB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link rel="shortcut icon" href="./assets/images/Condensed---White-Circle.ico" />
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-111602779-2');
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e,
+                t = document.createElement("style");
+            return (
+                (t.innerHTML = "root: { --tmp-var: bold; }"),
+                document.head.appendChild(t),
+                (e = !!(
+                    window.CSS &&
+                    window.CSS.supports &&
+                    window.CSS.supports("font-weight", "var(--tmp-var)")
+                )),
+                t.parentNode.removeChild(t),
+                e
+            );
+        };
+        supportsCssVars() ||
+            alert(
+                "Please view this demo in a modern browser that supports CSS Variables."
+            );
     </script>
-    <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/mob.css" media="(max-width:1249px)">
-    <link rel="stylesheet" href="static/css/main.css" media="(min-width:1250px)">
-    <link rel="stylesheet" href="static/css/sidebar.css" media="(max-width:1249px)">
-    <link rel="stylesheet" href="static/css/mainIndex.css" media="(min-width:1250px)">
-    <link rel="stylesheet" href="static/css/mobIndex.css" media="(max-width:1249px)">
-    <title>NIE IEEE Student Branch</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link href="./vendors/css/vendors.css" rel="stylesheet" />
+    <link href="./css/header.css" rel="stylesheet" />
+    <link href="./css/css.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/font.css" />
 </head>
 
-<body style="background-color: whitesmoke">
-    <nav class="navBarMob" style="display: none;">
-        <div>
-            <a class="navSideBtn" href="http://nisb.in" id="sideIndex">Home</a>
-        </div>
-        <div>
-            <a class="navSideBtn" href="./about" id="sideAbout">About</a>
-        </div>
-        <div>
-            <a class="navSideBtn" href="http://nisb.in/events" id="sideEvents">Events</a>
-        </div>
-        <div>
-            <a class="navSideBtn" href="http://nisb.in/chapters" id="sideChapters">Chapters</a>
-        </div>
-        <div>
-            <a class="navSideBtn" href="http://blog.nisb.in">Blog</a>
-        </div>
-        <div>
-            <a class="navSideBtn" href="http://nisb.in/contact" id="sideContact">Contact</a>
-        </div>
-    </nav>
-    <nav class="navbar">
-        <section>
-            <img class="sideBarBtn" onclick="showSideBar()" src="static/images/bars-solid.svg" style="height: 1.25rem; width: 1.25rem;">
-            <p class="title">Home</p>
-            <a href="http://nisb.in">
-                <img src="static/images/logo.png">
-            </a>
+<body>
+    <div id="splash" style="
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        --color-text: #fff;
+        --color-bg: #0e0e0f;
+        --color-link: #0f51e4;
+        --color-link-hover: #ebd944;
+        color: var(--color-text);
+        background-color: var(--color-bg);
+        font-family: Futura, futura-pt, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      ">
+        <!-- Header with flashly lines -->
+        <div class="overlay center">
             <div>
-                <div>
-                    <a href="http://nisb.in/" style="color: crimson">Home</a>
-                </div>
-                <div>
-                    <a href="http://nisb.in/about">About</a>
-                </div>
-                <div>
-                    <a href="http://nisb.in/events">Events</a>
-                </div>
-                <div>
-                    <a href="http://nisb.in/chapters">Chapters</a>
-                </div>
-                <div>
-                    <a href="http://blog.nisb.in" target="_blank">Blog</a>
-                </div>
-                <div>
-                    <a href="http://nisb.in/contact">Contact</a>
-                </div>
+                <img src="./assets/images/Condensed---White-Circle.png" alt="Logo" class="loader-img" />
+                <lottie-player src="./assets/JSON/loadingAmin.json" background="transparent" speed="1" style="width: 80px; height: 80px; margin-top: 50px" loop autoplay></lottie-player>
             </div>
-        </section>
-    </nav>
-    <div class="brSpace" style="width: 100%;"></div>
-    <img id="coverDisplay" src="static/images/c1.jpg">
+        </div>
+        <div class="header-overlay">
+            <nav class="navbar" role="navigation" style="
+                background-color: black;
+                z-index: 10000000;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            " aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <img src="./assets/images/Condensed---White.png" alt="NISB LOGO" />
+                    </a>
+                    <a href="index.html">
+                        <div class="navbar-item has-text-grey-light">
+                            Home
+                        </div>
+                    </a>
+                    <a href="#about">
+                        <div class="navbar-item has-text-grey-light">
+                            About
+                        </div>
+                    </a>
+                    <a href="#events">
+                        <div class="navbar-item has-text-grey-light">
+                            Events
+                        </div>
+                    </a>
+                    <a href="#team">
+                        <div class="navbar-item has-text-grey-light">
+                            Team
+                        </div>
+                    </a>
+                    <a href="#chapters">
+                        <div class="navbar-item has-text-grey-light">
+                            Chapters & Affinity Groups
+                        </div>
+                    </a>
+                    <a href="#contact">
+                        <div class="navbar-item has-text-grey-light">
+                            Contact
+                        </div>
+                    </a>
+                </div>
+            </nav>
 
-    <div id="aboutNISB">
-        <p class="aboutTitle">What is NISB?</p>
-        <div id="aboutNISBDiv">
-            NISB is the IEEE student branch of National Institute of Engineering. It is one of the largest and most active student branches
-            of Karnataka. Having been active for a decade, we have been honoured and humbled with numerous awards and accolades
-            over time, including "The Best Student Chapter" of Region 10­ Bangalore. We organize and host a wide range of
-            technical workshops and events. We have our odd sem fest ADROIT and even sem fest ANKURA. Electronika , IPL are
-            few our signature events.
+            <div class="header-info">
+                NISB is the IEEE student branch of National Institute of Engineering. It is one of the largest and most active student branches of Karnataka.Having been active for a decade, we have been honoured and humbled with numerous awards and accolades over time,
+                including "The Best Student Chapter" of Region 10­ Bangalore.
+            </div>
+
+            <div onclick="enter()" class="scrollDown">
+                <span> Enter Website </span><br />
+            </div>
         </div>
     </div>
+    <!-- TODO: Uncomment for custom cursor -->
 
-    <div id="whyNISB">
-        <div id="whyNISBDiv">
-            <div id="whyNISBIntro">
-                NISB conducts various kinds of workshops, seminars, webinars, technical talks, competitions, hackathons, and events througout
-                the semester to help its members for the all round development with the advancing technology.
-            </div>
-            <p class="aboutTitle" id="whyNISBTitle">Why NISB?</p>
+    <!-- End Of header with flashly lines -->
 
-        </div>
-        <div id="listingNISB">
-            <p id="listingNISBTitle">Apart from these, NISB also has unique practices like</p>
-            <div class="listingIND">
-                <p class="listingINDTitle">Focus Groups</p>
-                <div class="listingINDDiv">
-                    <img src="static/images/fg.jpg">
-                    <p class="listingINDCont">The people with common technical interest form groups to focus and learn on particular technology and
-                        develop real life application projects. We have been conducting various focus groups on Microcontrollers
-                        like AVR Atmega, Deep Learning, Web development & Python programming.</p>
-                </div>
-            </div>
-            <div class="listingIND">
-                <p class="listingINDTitle">WIE Weekly Meetups</p>
-                <div class="listingINDDiv">
-                    <img src="static/images/wieWeek.jpg">
-                    <p class="listingINDCont">Women in Engineering affinity group under NISB conducts weekly meetups where women are mostly focused
-                        to learn a new technical concepts and to implement simple projects.</p>
-                </div>
-            </div>
-            <div class="listingIND">
-                <p class="listingINDTitle">Technical Blog</p>
-                <div class="listingINDDiv">
-                    <img src="static/images/blog.png">
-                    <p class="listingINDCont">NISB has its one technical blog site which provides platform for students to showcase their writing skills
-                        and to learn from it. We also have a youtube channel to which helps students to keep learning new
-                        things. </p>
-                </div>
-            </div>
-            <div class="listingIND">
-                <p class="listingINDTitle">Industrial Visits</p>
-                <div class="listingINDDiv">
-                    <img src="static/images/cisco.jpg">
-                    <p class="listingINDCont"> As a part of technical tour to make students get an exposure about working of things in Industries every
-                        semester we conduct Industrial visits. Our recent visits include ISRO space centre, IISC Banglore,
-                        NOKIA, Cisco, Infosys.</p>
-                </div>
-            </div>
-            <div class="listingIND">
-                <p class="listingINDTitle">Social Initiatives</p>
-                <div class="listingINDDiv">
-                    <img src="static/images/wieSI.jpg">
-                    <p class="listingINDCont">Every year we visit Old age ashram's, Divya Deepa with a theme and to make children and aged people familiar
-                        with basic use of technology and its benefits for individuals.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div id="nisbPub">
-        <p id="nisbPubTitle">NISB Publications (Latest)</p>
-        <div>
-            <a href="https://www.dropbox.com/s/mudf5bvul8mqzju/MANAS%20Vol2%202018-19.pdf?raw=1" target="_blank" download>
-                <button id="manas">
-                    <p class="magTitle">MANAS</p>
-                    <p class="magCont">NISB Even Sem Newsletter</p>
-                </button>
-            </a>
-            <a href="https://www.dropbox.com/s/srp8dnste5jfdhl/JIJNASA%205th%20Edition.pdf?raw=1" target="_blank" download>
-                <button id="jignasa">
-                    <p class="magTitle">JIJNASA</p>
-                    <p class="magCont">NISB Yearly Magazine</p>
-                </button>
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <div id="footerDIV">
-            <div id="navNISB">
-                <a href="https://www.linkedin.com/company/nisb">
-                    <div class="navImg" id="in"></div>
-                </a>
-                <a href="https://github.com/nisbweb">
-                    <div class="navImg" id="git"></div>
-                </a>
-                <a href="https://www.facebook.com/NieIeeeStudentBranch/">
-                    <div class="navImg" id="fb"></div>
-                </a>
-            </div>
-            <div id="contactNISB">
-                <p>NIE IEEE Student Branch
-                    <br>The National Institute of Engineering
-                    <br>Mysuru </p>
-                    <p>Tejasvi Kashyap<br>+91 77381 43194<br>tejasvi_kashyap@ieee.org </p>
-            </div>
-        </div>
-    </footer>
-
-    <div id="clr"></div>
-
-    <script src="static/js/side.js"></script>
+    <script type="text/javascript" src="./vendors/js/vendors.js"></script>
+    <script type="text/javascript" src="./js/header.js"></script>
+    <script type="text/javascript" src="./js/load.js"></script>
+    <script type="text/javascript" src="./js//hamburger.js"></script>
+    <script type="text/javascript" src="./js/smotthScroll.js"></script>
+    <script>
+        function enter() {
+            window.open("./content.html", "_self");
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,39 @@
+body {
+    --color-text: #fff;
+    --color-bg: #1f174e;
+    --color-bg-2: #151436;
+    --color-bg-3: #000;
+    --color-link: #8596df;
+    --color-link-hover: #723bb7;
+    background: radial-gradient(ellipse at 30% 48%, var(--color-bg) 0, var(--color-bg-2) 45%, var(--color-bg-3) 150%);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader-img {
+    width: 50vh;
+}
+
+.center div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+    .loader-img {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 1000) {
+    .loader-img {
+        width: 40vw;
+    }
+}
