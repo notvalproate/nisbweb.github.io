@@ -5,7 +5,7 @@ body {
     margin: 0;
     background-color: #17141d;
     color: white;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 ::selection {
@@ -52,26 +52,33 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+
+/* Make navbar items aligned center  */
+
+.navbar-brand {
+    align-items: center;
+}
+
 /* Special Title */
 
 .special-title {
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
     font-size: 3rem;
-    letter-spacing: -0.25rem;
+    letter-spacing: -0.15rem;
 }
 
 .head-norm {
-    padding: 0.25rem;
     transition: all 0.25s ease-in-out;
+    /* padding: 0.25rem;
     margin-top: 0.67em;
-    margin-bottom: 0.67em;
+    margin-bottom: 0.67em; */
     margin-left: 0;
     margin-right: 0;
 }
 
 .head-norm:hover {
-    transform: scale(1.45);
+    transform: scale(1.25);
     padding: 0.05rem;
 }
 
@@ -96,7 +103,21 @@ body::-webkit-scrollbar-thumb {
     font-size: 4.5rem !important;
 }
 
-
+@media (max-width: 767px) {
+    .head-norm {
+        margin: 4rem;
+    }
+    .head-norm h1 {
+        font-size: 1.75rem !important;
+    }
+    .special-title:first-child {
+        margin-top: 3rem;
+    }
+    .special-title {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+    }
+}
 /* Nav bar classes */
 
 .navbar-item {
@@ -214,6 +235,12 @@ body::-webkit-scrollbar-thumb {
   scroll-snap-align: start;
   clear: both;
   position: relative;
+}
+
+@media (max-width: 767px) {
+    .card {
+        height: 60vh;
+    }
 }
 
 .card:focus-within ~ .card,
@@ -362,6 +389,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .team-div {
+    position: relative;
     height: 40vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -369,13 +397,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .team-div:hover {
+    z-index: 100;
     transform: scale(1.05);
-    box-shadow: 3px 3px 10px black, -3px -3px 10px black;
+    box-shadow: 3px 3px 40px black, -3px -3px 10px black;
 }
 
 .team-div .desc {
-    position: relative;
-    top: 32.5vh;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.4);
@@ -464,6 +493,11 @@ body::-webkit-scrollbar-thumb {
     background-position: bottom center;
     padding: 150px 0 0 0;
 }
+@media (max-width: 767px) {
+    .program_details_area {
+        padding: 30px 0 0 0;
+    }
+}
 
 
 /* line 11, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
@@ -483,7 +517,7 @@ body::-webkit-scrollbar-thumb {
     transform: translateX(-50%);
     content: '';
     background: white;
-    height: 80%;
+    height: 76%;
     width: 1px;
     top: 0;
     bottom: 0;
@@ -494,7 +528,7 @@ body::-webkit-scrollbar-thumb {
     .program_details_area .program_detail_wrap::before {
         left: 13px;
         transform: translateX(0);
-        height: 75%;
+        height: 83%;
     }
 }
 
@@ -710,6 +744,19 @@ body::-webkit-scrollbar-thumb {
     left: -10%;
 }
 
+@media (max-width: 767px) {
+    .btn {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .btn ion-icon {
+        font-size: 4vw;
+        top: 20%;
+    }
+}
+
+
 @keyframes aaa {
     0% {
         left: -110%;
@@ -736,4 +783,26 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     clear: both;
     padding: 2em;
+}
+
+.society-card-parent {
+    justify-content: space-around;
+    margin: auto 1rem;
+}
+/* @media (min-width: 767px) {
+    .society-card-parent {
+        padding: ;
+    }
+
+} */
+
+@media (min-width: 767px) {
+    .society-card-parent {
+        margin: 0 5rem;
+    }
+}
+
+
+.external-buttons {
+    margin: 0.5rem 0.3rem;
 }
