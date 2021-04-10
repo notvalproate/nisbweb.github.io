@@ -59,6 +59,14 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
+.navbar-item {
+    transition: all 0.1s linear;
+}
+
+.navbar-item:hover {
+    background-color: transparent !important;
+}
+
 /* Special Title */
 
 .special-title {
@@ -805,4 +813,9 @@ body::-webkit-scrollbar-thumb {
 
 .external-buttons {
     margin: 0.5rem 0.3rem;
+}
+
+#nisb-brand {
+    padding: 0 0.75rem;
+    color: white;
 }
