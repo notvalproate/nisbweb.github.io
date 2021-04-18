@@ -28,43 +28,53 @@
       " aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item">
-                <img src="./assets/images/Condensed---White.png" alt="NISB LOGO" />
+                <img src="./assets/images/Condensed---White.png" alt="NISB LOGO" style="padding: 0 0.75rem;" />
+                <span id="nisb-brand">NISB</span>
             </a>
-            <a href="index.html">
-                <div class="navbar-item has-text-grey-light">
-                    Home
-                </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-            <a href="#about">
-                <div class="navbar-item has-text-grey-light">
-                    About
-                </div>
-            </a>
-            <a href="#events">
-                <div class="navbar-item has-text-grey-light">
-                    Events
-                </div>
-            </a>
-            <a href="#team">
-                <div class="navbar-item has-text-grey-light">
-                    Team
-                </div>
-            </a>
-            <a href="#chapters">
-                <div class="navbar-item has-text-grey-light">
-                    Chapters & Affinity Groups
-                </div>
-            </a>
-            <a href="#contact">
-                <div class="navbar-item has-text-grey-light">
-                    Contact
-                </div>
-            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu" style="background-color: black;">
+            <div class="navbar-start">
+                <a href="index.html" class="navbar-item">
+                    <div class="navbar-item has-text-grey-light">
+                        Home
+                    </div>
+                </a>
+                <a href="#about" class="navbar-item">
+                    <div class="navbar-item has-text-grey-light">
+                        About
+                    </div>
+                </a>
+                <a href="#events" class="navbar-item">
+                    <div class="navbar-item has-text-grey-light">
+                        Events
+                    </div>
+                </a>
+                <a href="#team" class="navbar-item">
+                    <div class="navbar-item has-text-grey-light">
+                        Team
+                    </div>
+                </a>
+                <a href="#chapters" class="navbar-item">
+                    <div class="navbar-item has-text-grey-light">
+                        Chapters & Affinity Groups
+                    </div>
+                </a>
+                <a href="#contact" class="navbar-item">
+                    <div class="navbar-item has-text-grey-light">
+                        Contact
+                    </div>
+                </a>
+            </div>
         </div>
     </nav>
 
     <header style="padding-top: 10vh; min-height: 100vh" id="about">
-        <div class="columns">
+        <div class="columns" style="max-width: 100vw;">
             <div class="column is-6 is-offset-1">
                 <div class="special-title">What is NISB ?</div>
                 <p>
@@ -84,27 +94,27 @@
                     IEEE Bangalore Section was established in 1977 and is one of the most vibrant and dynamic IEEE Section across globe. Over the years the strength of the section has grown steadily and currently the Section membership stands more than 8600.
                 </p>
                 <br /><br />
-                <a href="https://discord.gg/9kyEejWanq" class="button is-info">
+                <a href="https://discord.gg/9kyEejWanq" class="button is-info external-buttons">
                     <ion-icon name="logo-discord"></ion-icon> &nbsp;
                     <b>CommuNIEty Server</b>
                 </a>
-                <a href="https://www.linkedin.com/company/nisb/" class="button is-link">
+                <a href="https://www.linkedin.com/company/nisb/" class="button is-link external-buttons">
                     <ion-icon name="logo-linkedin"></ion-icon> &nbsp;
                     <b>LinkedIn</b>
                 </a>
-                <a href="https://github.com/nisbweb" class="button is-dark">
+                <a href="https://github.com/nisbweb" class="button is-dark external-buttons">
                     <ion-icon name="logo-github"></ion-icon> &nbsp;
                     <b>Github</b>
                 </a>
-                <a href="https://www.instagram.com/nie_ieee_student_branch/" class="button is-danger">
+                <a href="https://www.instagram.com/nie_ieee_student_branch/" class="button is-danger external-buttons">
                     <ion-icon name="logo-insta"></ion-icon> &nbsp;
                     <b>Instagram</b>
                 </a>
-                <a href="https://www.youtube.com/channel/UCATF66mX12qcxEIA3lgSpaw" class="button is-danger">
+                <a href="https://www.youtube.com/channel/UCATF66mX12qcxEIA3lgSpaw" class="button is-danger external-buttons">
                     <ion-icon name="logo-youtube"></ion-icon> &nbsp;
                     <b>Youtube</b>
                 </a>
-                <a href="https://www.ieee.org/" class="button is-primary">
+                <a href="https://www.ieee.org/" class="button is-primary external-buttons">
                     <b>IEEE Global</b>
                 </a>
                 <br /><br /><br /><br />
@@ -127,11 +137,11 @@
                         </div>
                     </div>
                 </div>
-                <a href="https://blog.nisb.in/" class="button is-primary">
+                <a href="https://blog.nisb.in/" class="button is-primary external-buttons">
                     <ion-icon name="book-outline"></ion-icon> &nbsp;
                     <b>Check out our blog here --></b>
                 </a>
-                <a href="https://ieeebangalore.org/newsletters/" class="button is-danger">
+                <a href="https://ieeebangalore.org/newsletters/" class="button is-danger external-buttons">
                     <ion-icon name="book-outline"></ion-icon> &nbsp;
                     <b>IEEE Banagalore Section Newsletters --></b>
                 </a>
@@ -261,8 +271,8 @@
                         <img src="./assets/images/Condensed---White-Circle.png" />
                     </a>
                     <svg class="half-circle" viewBox="0 0 106 57">
-              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-            </svg>
+                        <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                    </svg>
 
                     <div class="author-name">
                         <div class="author-name-prefix">Venue - online</div>
@@ -601,8 +611,9 @@
                 <h1>Chapters and Affinity Groups</h1>
             </div>
         </section>
-        <div class="columns">
-            <article class="card1 is-offset-1 is-3 column">
+        <!-- width 100% to make sure it fits in the screen size-->
+        <div class="columns is-tablet society-card-parent">
+            <article class="card1 is-3 column">
                 <div class="container">
                     <header>
                         <img style="height:100px" src="./assets/images/wie.png">
@@ -617,7 +628,7 @@
                     <a href="https://wie.ieee.org" target="_blank">Read more --></a>
                 </div>
             </article>
-            <article class="card1 is-3 column" style="margin-left: 4vw">
+            <article class="card1 is-3 column">
                 <div class="container">
                     <header>
                         <img style="height:100px" src="./assets/images/cs.png">
@@ -632,7 +643,7 @@
                     <a href="https://www.computer.org" target="_blank">Read more --></a>
                 </div>
             </article>
-            <article class="card1 is-3 column" style="margin-left: 4vw">
+            <article class="card1 is-3 column">
                 <div class="container">
                     <header>
                         <img style="height:100px" src="./assets/images/cas.png">
@@ -656,7 +667,7 @@
         </section>
         <div class="columns" style="margin-right: 5vw; margin-left: 5vw">
             <div class="column">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.471105659842!2d76.63895801453533!3d12.284028791309561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf65561e102919%3A0xf947b18cc5ad3d88!2sThe%20National%20Institute%20of%20Engineering!5e0!3m2!1sen!2sin!4v1608920087132!5m2!1sen!2sin"
+                <iframe style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.471105659842!2d76.63895801453533!3d12.284028791309561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf65561e102919%3A0xf947b18cc5ad3d88!2sThe%20National%20Institute%20of%20Engineering!5e0!3m2!1sen!2sin!4v1608920087132!5m2!1sen!2sin"
                     width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
             <div class="column is-7 contact-box">
