@@ -190,7 +190,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .card-header h2 {
@@ -229,7 +229,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-  height: 45vh;
+  /* height: 45vh; */
   width: 400px;
   min-width: 250px;
   padding: 1.5rem;
@@ -247,8 +247,12 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 767px) {
     .card {
-        height: 60vh;
+        /* height: 60vh; */
     }
+}
+
+.card p{
+    margin: 1rem 0;
 }
 
 .card:focus-within ~ .card,
@@ -381,7 +385,7 @@ body::-webkit-scrollbar-thumb {
 /* TEAM */
 
 .team {
-    width: 100vw;
+    width: 100%;
     padding: 3rem;
 }
 
@@ -468,7 +472,7 @@ body::-webkit-scrollbar-thumb {
 
 .vol-box {
     height: 8vh;
-    background-image: url("../assets/images/team/Tejasvi.jpg");
+    background-image: url("../assets/Cores/Tejasvi.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 0.25s linear;
