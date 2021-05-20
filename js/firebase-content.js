@@ -35,7 +35,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
     var timer
 
+    var SocietyImages = {
+        "NISB": "./assets/images/Condensed---White-Circle.png",
+        "WIE": "./assets/images/wie.png",
+        "Computer Society": "./assets/images/cs.png",
+    }
 
+    function GetDate(timestamp) {
+        let date = new Date(timestamp*1000)
+        return `${date.getDate()+1}/${date.getMonth() + 1}/${date.getFullYear()}`
+    }
     function htmlToElem(html) {
         let temp = document.createElement('template');
         html = html.trim(); // Never return a space text node as a result
@@ -56,13 +65,13 @@ window.addEventListener("DOMContentLoaded", () => {
             <article class="card">
                 <header class="card-header">
                     <h2>${docs[i].data().name}</h2>
-                </header><br style="display:none;">
+                </header>${GetDate(docs[i].data().timeStamp)}<br style="display:none;">
                 <p>
                     <img src="${docs[i].data().imgUrl}" alt="">
                 </p>
                 <div class="card-author">
                     <a class="author-avatar" href="#">
-                        <img src="./assets/images/Condensed---White-Circle.png" />
+                        <img src="${SocietyImages[docs[i].data().organiser]}" />
                     </a>
                     <svg class="half-circle" viewBox="0 0 106 57">
                         <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
@@ -82,13 +91,12 @@ window.addEventListener("DOMContentLoaded", () => {
             </article>
         `))
         }
-        console.log(docs.length, events.length)
         loading = false
     }
 
     var first = db.collection("events")
-        .orderBy("timeStamp")
-        .limit(10);
+        .orderBy("timeStamp", "desc")
+        .limit(15);
     var next
     var lastVisible
 
@@ -97,12 +105,11 @@ window.addEventListener("DOMContentLoaded", () => {
     first.get().then((documentSnapshots) => {
         // Get the last visible document
         lastVisible = documentSnapshots.docs[documentSnapshots.docs.length - 1];
-        console.log(documentSnapshots.docs.length)
         AppendEvents(documentSnapshots.docs)
 
 
         next = db.collection("events")
-            .orderBy("timeStamp")
+            .orderBy("timeStamp", "desc")
             .startAfter(lastVisible)
             .limit(10);
     }).catch((err) => {
@@ -123,7 +130,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
             next = db.collection("events")
-                .orderBy("timeStamp")
+                .orderBy("timeStamp", "desc")
                 .startAfter(lastVisible)
                 .limit(10);
         }).catch((err) => {

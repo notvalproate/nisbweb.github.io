@@ -27,8 +27,16 @@ body {
 
 .header-info {
     position: absolute;
-    top: 60vh;
-    padding: 0 200px;
+    top: 50vh;
+    padding: 0 20px;
+}
+
+@media (min-width: 767px) {
+    .header-info {
+        top: 60vh;
+        padding: 0 200px;
+    }
+    
 }
 
 body::-webkit-scrollbar-track {
@@ -189,7 +197,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
 }
 
@@ -248,24 +256,41 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 767px) {
     .card {
         /* height: 60vh; */
+        /* transform: translateX(130px); */
+        min-width:300px;
     }
 }
 
+
 .card p{
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    width: 100%;
 }
 
-.card:focus-within ~ .card,
-.card:hover ~ .card {
-  transform: translateX(130px);
+.card p img {
+    width: 100%;
+    object-fit: contain;
+    height: 23vh;
 }
 
-.card:hover {
-    transform: translateY(-1rem);
-}
 
-.card:not(:first-child) {
-    margin-left: -130px;
+
+@media (min-width: 767px) {
+    .card:focus-within ~ .card,
+    .card:hover ~ .card {
+        transform: translateX(130px);
+    }
+    
+    .card:hover {
+        transform: translateY(-1rem);
+    }
+    
+    .card:not(:first-child) {
+        margin-left: -130px;
+    }
 }
 
 .card-header {
