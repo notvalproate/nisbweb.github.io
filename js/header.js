@@ -258,6 +258,9 @@
         (L.camera.position.z = 2), L.addBloomEffect({ resolutionScale: 0.5, kernelSize: 4, distinction: 0.01 }, 1);
         var C = new a.a(P.a.isMobile ? "NISB" : "NIE IEEE STUDENT BRANCH", { color: "#FFFFFF", size: P.a.isMobile ? 0.1 : 0.1, wireframe: !0, opacity: 1 });
         (C.position.x -= 0.5 * C.basePosition), L.add(C);
+        if(P.a.isMobile) {
+            (C.position.y += 0.7 * C.basePosition), L.add(C);
+        }
         var R = new i.a();
         (R.update = function () {
             (R.rotation.y -= 4e-4), (R.rotation.x -= 2e-4);

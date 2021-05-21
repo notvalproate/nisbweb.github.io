@@ -438,7 +438,7 @@ var data = {
       "date" : "05-07-2020",
       "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/nisbevents.appspot.com/o/events%2FXtreme_Walkthrough.jpeg?alt=media",
       "name" : "IEEEXtreme:Walkthrough",
-      "organiser" : "NISB ",
+      "organiser" : "NISB",
       "regUrl" : "http://bit.ly/xtremeWalkthrough",
       "time" : "6:00 PM",
       "timeStamp" : 1593907200,
