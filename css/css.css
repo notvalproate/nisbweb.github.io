@@ -422,7 +422,7 @@ body::-webkit-scrollbar-thumb {
 
 .team-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .team-div {
