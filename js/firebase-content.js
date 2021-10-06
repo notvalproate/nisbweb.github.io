@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
     var SocietyImages = {
         "NISB": "./assets/images/Condensed---White-Circle.png",
         "WIE": "./assets/images/wie.png",
-        "Computer Society": "./assets/images/cs.png",
+        "CS": "./assets/images/cs.png",
     }
 
     function GetDate(timestamp) {
@@ -53,33 +53,33 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function AppendEvents(docs) {
-        if (docs.length < 10 || docs.length === 0) {
+        if (docs.length === 0) {
             flag = false
             return
         }
         
         for (let i = 0; i < docs.length; i++) {
-            events.push(docs[i].data())
-            // console.log("Appending: "+ docs[i].data().name)
+            events.push(docs[i])
+            // console.log("Appending: "+ docs[i].name)
             cardList.appendChild(htmlToElem(`
             <article class="card">
                 <header class="card-header">
-                    <h2>${docs[i].data().name}</h2>
-                </header>${GetDate(docs[i].data().timeStamp)}<br style="display:none;">
+                    <h2>${docs[i].name}</h2>
+                </header>${docs[i].date}<br style="display:none;">
                 <p>
-                    <img src="${docs[i].data().imgUrl}" alt="">
+                    <img src="https://drive.google.com/uc?id=${docs[i].imgUrl}" alt="">
                 </p>
                 <div class="card-author">
                     <a class="author-avatar" href="#">
-                        <img src="${SocietyImages[docs[i].data().organiser]}" />
+                        <img src="${SocietyImages[docs[i].organiser]}" />
                     </a>
                     <svg class="half-circle" viewBox="0 0 106 57">
                         <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
                     </svg>
 
                     <div class="author-name">
-                        <div class="author-name-prefix">Venue - ${docs[i].data().venue}</div>
-                        ${docs[i].data().organiser}
+                        <div class="author-name-prefix">Venue - ${docs[i].venue}</div>
+                        ${docs[i].organiser}
                     </div>
 
                 </div>
@@ -91,7 +91,6 @@ window.addEventListener("DOMContentLoaded", () => {
             </article>
         `))
         }
-        loading = false
     }
 
     var first = db.collection("events")
@@ -99,53 +98,37 @@ window.addEventListener("DOMContentLoaded", () => {
         .limit(15);
     var next
     var lastVisible
-
-    // get first 10 docs
-    loading = true
-    first.get().then((documentSnapshots) => {
-        // Get the last visible document
-        lastVisible = documentSnapshots.docs[documentSnapshots.docs.length - 1];
-        AppendEvents(documentSnapshots.docs)
-
-
-        next = db.collection("events")
-            .orderBy("timeStamp", "desc")
-            .startAfter(lastVisible)
-            .limit(10);
-    }).catch((err) => {
-        console.log(err)
-    })
-
-    function GetNext() {
-        if (!flag) {
-            return
-        }
-        next.get().then((documentSnapshots) => {
-            // Get the last visible document
-            console.log(lastVisible.data().name);
-            lastVisible = documentSnapshots.docs[documentSnapshots.docs.length - 1];
-
-            // append events to existing array
-            AppendEvents(documentSnapshots.docs)
-
-
-            next = db.collection("events")
-                .orderBy("timeStamp", "desc")
-                .startAfter(lastVisible)
-                .limit(10);
-        }).catch((err) => {
-            console.log(err)
+    
+    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1wHYE0SCpAApAzRKL2BQmEXrTDtxSh6LQ9EPy_27GWlI/pub?output=csv';
+    function init() {
+        Papa.parse(public_spreadsheet_url, {
+            download: true,
+            header: true,
+            complete: function(results) {
+                loading = true
+                var data = results.data
+                console.log(data)
+                AppendEvents(data)
+                loading = false
+            }
         })
     }
+    init()
+    // window.addEventListener('DOMContentLoaded', init)
+    // get first 10 docs
+    // first.get().then((documentSnapshots) => {
+    //     // Get the last visible document
+    //     lastVisible = documentSnapshots.docs[documentSnapshots.docs.length - 1];
+    //     console.log(documentSnapshots.docs)
+    //     AppendEvents(documentSnapshots.docs)
 
-    cardList.onscroll = (event) => {
-        console.log("loading: ", loading)
-        if(cardList.scrollWidth-cardList.scrollLeft<=cardList.offsetWidth && loading === false) {
-            clearTimeout(timer)
-            timer = setTimeout(() => {
-                GetNext()
-            }, 1000)
-        }
-    }
+
+    //     next = db.collection("events")
+    //         .orderBy("timeStamp", "desc")
+    //         .startAfter(lastVisible)
+    //         .limit(10);
+    // }).catch((err) => {
+    //     console.log(err)
+    // })
 
 })
