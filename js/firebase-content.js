@@ -39,6 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
         "NISB": "./assets/images/Condensed---White-Circle.png",
         "WIE": "./assets/images/wie.png",
         "CS": "./assets/images/cs.png",
+        "CASS": "./assets/images/cas.png",
     }
 
     function GetDate(timestamp) {
