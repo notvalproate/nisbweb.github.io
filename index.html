@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NISB</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
-    <link rel="shortcut icon" href="./assets/images/Condensed---White-Circle.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/Condensed---White-Circle.ico"
+    />
     <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function() {
-            var e,
-                t = document.createElement("style");
-            return (
-                (t.innerHTML = "root: { --tmp-var: bold; }"),
-                document.head.appendChild(t),
-                (e = !!(
-                    window.CSS &&
-                    window.CSS.supports &&
-                    window.CSS.supports("font-weight", "var(--tmp-var)")
-                )),
-                t.parentNode.removeChild(t),
-                e
-            );
-        };
-        supportsCssVars() ||
-            alert(
-                "Please view this demo in a modern browser that supports CSS Variables."
-            );
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <link href="./vendors/css/vendors.css" rel="stylesheet" />
     <link href="./css/header.css" rel="stylesheet" />
     <link href="./css/css.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/font.css" />
-</head>
+  </head>
 
-<body>
-    <div id="splash" style="
+  <body>
+    <div
+      id="splash"
+      style="
         margin: 0;
         height: 100%;
         width: 100%;
@@ -56,16 +66,28 @@
         font-family: Futura, futura-pt, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-      ">
-        <!-- Header with flashly lines -->
-        <div class="overlay center">
-            <div>
-                <img src="./assets/images/Condensed---White-Circle.png" alt="Logo" class="loader-img" />
-                <lottie-player src="./assets/JSON/loadingAmin.json" background="transparent" speed="1" style="width: 80px; height: 80px; margin-top: 50px" loop autoplay></lottie-player>
-            </div>
+      "
+    >
+      <!-- Header with flashly lines -->
+      <div class="overlay center">
+        <div>
+          <img
+            src="./assets/images/Condensed---White-Circle.png"
+            alt="Logo"
+            class="loader-img"
+          />
+          <lottie-player
+            src="./assets/JSON/loadingAmin.json"
+            background="transparent"
+            speed="1"
+            style="width: 80px; height: 80px; margin-top: 50px"
+            loop
+            autoplay
+          ></lottie-player>
         </div>
-        <div class="header-overlay">
-            <!-- <nav class="navbar" role="navigation" style="
+      </div>
+      <div class="header-overlay">
+        <!-- <nav class="navbar" role="navigation" style="
                 background-color: black;
                 z-index: 10000000;
                 position: fixed;
@@ -109,15 +131,18 @@
                 </div>
             </nav> -->
 
-            <div class="header-info">
-                NISB is the IEEE student branch of National Institute of Engineering. It is one of the largest and most active student branches of Karnataka.Having been active for a decade, we have been honoured and humbled with numerous awards and accolades over time,
-                including "The Best Student Chapter" of Region 10­ Bangalore.
-            </div>
-
-            <div onclick="enter()" class="scrollDown">
-                <span> Enter Website </span><br />
-            </div>
+        <div class="header-info">
+          NISB is the IEEE student branch of National Institute of Engineering.
+          It is one of the largest and most active student branches of
+          Karnataka.Having been active for a decade, we have been honoured and
+          humbled with numerous awards and accolades over time, including "The
+          Best Student Chapter" of Region 10­ Bangalore.
         </div>
+
+        <div onclick="enter()" class="scrollDown">
+          <span> Enter Website </span><br />
+        </div>
+      </div>
     </div>
     <!-- TODO: Uncomment for custom cursor -->
 
@@ -129,10 +154,9 @@
     <script type="text/javascript" src="./js//hamburger.js"></script>
     <script type="text/javascript" src="./js/smotthScroll.js"></script>
     <script>
-        function enter() {
-            window.open("./content.html", "_self");
-        }
+      function enter() {
+        window.open("./content.html", "_self");
+      }
     </script>
-</body>
-
+  </body>
 </html>
