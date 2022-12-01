@@ -50,8 +50,26 @@
       firebase.analytics();
     </script>
   </head>
-
   <body>
+    <div class="hero-announcement">
+      <div class="hero-top mb-1">
+        Adroit'22
+        <div id="day"></div>
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="sec"></div>
+        to go 🚀
+      </div>
+      <!-- <marquee id="announcement"
+        >Enroll as an IEEE member to avail free events of RUBIX'23 now!
+      </marquee> -->
+      <a
+        id="cross"
+        onclick="cross()"
+        style="position: absolute; right: 10px; top: 5px"
+        ><i class="fa-solid fa-x"></i
+      ></a>
+    </div>
     <nav
       class="navbar"
       role="navigation"
@@ -115,7 +133,7 @@
       </div>
     </nav>
 
-    <header style="padding-top: 10vh; min-height: 100vh" id="about">
+    <header style="padding-top: 20vh; min-height: 100vh" id="about">
       <div class="columns" style="max-width: 100vw">
         <div class="column is-6 is-offset-1">
           <div class="special-title">What is NISB ?</div>
@@ -130,6 +148,7 @@
             IPL are few our signature events.
           </p>
           <br />
+
           <br />
           <div class="special-title">Why NISB ?</div>
           <p>
@@ -752,5 +771,8 @@
     ></script>
     <script type="text/javascript" src="./js/firebase-content.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="js/timer-hero.js"></script>
+    <script src="js/timer-top.js"></script>
+    <script src="js/announcement.js"></script>
   </body>
 </html>

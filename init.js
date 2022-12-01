@@ -3,7 +3,7 @@ function init() {
     Papa.parse(public_spreadsheet_url, {
         download: true,
         header: true,
-        complete: function(results) {
+        complete: function (results) {
             var data = results.data
             console.log(data)
         }
