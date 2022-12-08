@@ -13,12 +13,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .hero-top > div {
-  height: 4vh;
-  width: 7vh;
+  height: 3vh;
+  width: 6vh;
   border: 3px solid #db0b5f;
   margin: 5px;
   font-size: 15px;
@@ -26,6 +26,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  #announce-before,
+  #announce-after {
+    display: none !important;
+  }
 }
 
 .hero-announcement {
