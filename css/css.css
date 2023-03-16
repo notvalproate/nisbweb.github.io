@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* cursor: none; */
   font-family: "ProductSans";
@@ -96,16 +100,51 @@ body::-webkit-scrollbar-thumb {
 
 /* Make navbar items aligned center  */
 
+.navbar {
+  animation: navbar-anim 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s both;
+}
+
 .navbar-brand {
+  font-size: 150%;
   align-items: center;
 }
 
+.navbar-brand .navbar-item:hover {
+  transform: none !important;
+  text-shadow: none;
+}
+
 .navbar-item {
+  margin: 0 1vw;
   transition: all 0.1s linear;
 }
 
 .navbar-item:hover {
+  transform: translate(-1px, -1px) !important;
+  text-shadow: 1px 1px rgb(234, 0, 255);
   background-color: transparent !important;
+}
+
+.navbar-menu .navbar-item {
+  animation: navbar-anim 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.navbar-item:nth-child(1) { animation-delay: 1s;}
+.navbar-item:nth-child(2) { animation-delay: 1.1s;}
+.navbar-item:nth-child(3) { animation-delay: 1.2s;}
+.navbar-item:nth-child(4) { animation-delay: 1.3s;}
+.navbar-item:nth-child(5) { animation-delay: 1.4s;}
+.navbar-item:nth-child(6) { animation-delay: 1.5s;}
+
+@media (max-width: 1023px) {
+    .navbar-item {
+      animation: none !important;
+    }
+}
+
+@keyframes navbar-anim {
+  from {transform: translate(0, -100%);}
+  to {transform: translate(0,0);}
 }
 
 /* Special Title */
