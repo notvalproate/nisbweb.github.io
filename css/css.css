@@ -7,9 +7,13 @@ body {
   font-family: "ProductSans";
   padding: 0;
   margin: 0;
-  background-color: #17141d;
+  background-color: rgb(17, 17, 29);
   color: white;
   /* overflow-x: hidden; */
+}
+
+a {
+  text-decoration: none;
 }
 
 .hero-top {
@@ -98,7 +102,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
-/* Make navbar items aligned center  */
+/* Navbar classes  */
 
 .navbar {
   animation: navbar-anim 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s both;
@@ -117,9 +121,12 @@ body::-webkit-scrollbar-thumb {
 .navbar-item {
   margin: 0 1vw;
   transition: all 0.1s linear;
+  text-transform: uppercase !important;
+  font-weight: bold;
 }
 
 .navbar-item:hover {
+  color: #fff !important;
   transform: translate(-1px, -1px) !important;
   text-shadow: 1px 1px rgb(234, 0, 255);
   background-color: transparent !important;
@@ -206,15 +213,111 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5rem;
   }
 }
-/* Nav bar classes */
 
-.navbar-item {
-  text-transform: uppercase !important;
-  font-weight: bold;
+/* About section */
+
+#bg-particles {
+  margin: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.navbar-item:hover {
-  color: #fff !important;
+.about-section {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 125px 8vw 50px;
+  margin: 0;
+}
+
+.about {
+  width: 50%;
+  line-height: 1.25;
+}
+
+.about h1 {
+  margin: 0.67em 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.about p {
+  line-height: 25px;
+}
+
+.about span {
+  color: rgb(255, 91, 9);
+}
+
+#part-one {
+  transform: translateY(100px);
+  opacity: 0;
+  animation: fade-up 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1.6s both;
+}
+
+#part-two {
+  transform: translateY(100px);
+  opacity: 0;
+  animation: fade-up 1.5s cubic-bezier(0.19, 1, 0.22, 1) 2s both;
+}
+
+.publications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  row-gap: 40px;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: fade-up 1.5s cubic-bezier(0.19, 1, 0.22, 1) 2s both;
+}
+
+.publications h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 2px 2px rgb(0, 86, 151);
+}
+
+.publications h4 {
+  font-weight: 900;
+  color: white;
+}
+
+.books {
+  transform-origin: top;
+  display: flex;
+  column-gap: 20px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.book-title {
+  text-align: center;
+  transform: translateZ(40px);
+}
+
+.book img {
+  width: 90%;
+}
+
+@keyframes fade-up {
+  to{
+      transform: translateY(0);
+      opacity: 100%;
+  }
 }
 
 /* ScrollDown text */
