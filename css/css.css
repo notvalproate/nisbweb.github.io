@@ -4,7 +4,7 @@ html {
 
 body {
   /* cursor: none; */
-  font-family: "ProductSans";
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0;
   background-color: rgb(17, 17, 29);
@@ -216,21 +216,20 @@ body::-webkit-scrollbar-thumb {
 
 /* About section */
 
+header {
+  position: relative;
+}
+
 #bg-particles {
-  margin: 0;
-  top: 0;
-  right: 0;
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
 .about-section {
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 125px 8vw 50px;
+  padding: 100px 8vw 50px;
   margin: 0;
 }
 
@@ -271,7 +270,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   width: fit-content;
-  row-gap: 40px;
+  row-gap: 30px;
   transform: translateY(100px);
   opacity: 0;
   animation: fade-up 1.5s cubic-bezier(0.19, 1, 0.22, 1) 2s both;
@@ -300,6 +299,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   width: 250px;
+  row-gap: 20px;
   transform-style: preserve-3d;
   transform: perspective(1000px);
 }
@@ -311,6 +311,89 @@ body::-webkit-scrollbar-thumb {
 
 .book img {
   width: 90%;
+}
+
+.bangalore-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: fade-up 1.5s cubic-bezier(0.19, 1, 0.22, 1) 2.4s both;
+}
+
+.bangalore-section h1 {
+  margin: 0.67em 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.bangalore-section span {
+  color: rgb(255, 91, 9);
+}
+
+.bangalore-section p {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 70vw;
+}
+
+.purple-shadow {
+  color: white !important;
+  text-shadow: 2px 2px rgb(255, 91, 9);
+}
+
+.links-wrapper {
+  width: 50vw;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  color: white;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: 150ms;
+}
+
+.links:nth-child(1) {
+  background-color: rgb(88, 101, 242);
+}
+.links:nth-child(2) {
+  background-color: rgb(10, 102, 194);
+}
+.links:nth-child(3) {
+  background-color: rgb(51, 51, 51);
+}
+.links:nth-child(4) {
+  background-color: rgb(209, 41, 183);
+}
+.links:nth-child(5) {
+  background-color: rgb(255, 0, 0);
+}
+.links:nth-child(6) {
+  background-color: rgb(27, 211, 143);
+}
+.links:nth-child(7) {
+  background-color: rgb(76, 182, 247);
+}
+.links:nth-child(8) {
+  background-color: rgb(225, 75, 75);
+}
+
+.links:hover {
+  color: rgb(216, 216, 216);
 }
 
 @keyframes fade-up {
